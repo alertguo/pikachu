@@ -1,17 +1,15 @@
-* {
+const string = `.skin * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-*::after,
-*::before {
+.skin *::after,
+.skin *::before {
   box-sizing: border-box;
 }
-body {
-  background: #ffe600;
-  min-height: 100vh;
-}
 .skin {
+  background: #ffe600;
+  min-height: 50vh;
   position: relative;
 }
 .nose {
@@ -29,24 +27,24 @@ body {
   z-index: 10;
   /* 防止被上嘴唇覆盖 */
 }
-@keyframes wave {
-  0% {
+@keyframes wave{
+  0%{
     transform: rotate(0deg);
   }
-  33% {
+  33%{
     transform: rotate(5deg);
   }
-  66% {
+  66%{
     transform: rotate(-5deg);
   }
-  100% {
+  100%{
     transform: rotate(0deg);
   }
 }
-.nose:hover {
+.nose:hover{
   transform-origin: center bottom;
   /* 更改元素变形的原点为最下面中间的点 */
-  animation: wave 230ms linear infinite;
+  animation: wave 230ms linear infinite ;
 }
 .arc {
   position: absolute;
@@ -185,3 +183,5 @@ body {
 .face.right {
   transform: translateX(160px);
 }
+`
+export default string; // 导出内容
