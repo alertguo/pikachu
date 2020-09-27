@@ -163,7 +163,9 @@ var player = {
   bindEvents: function bindEvents() {
     for (var key in player.events) {
       if (player.events.hasOwnProperty(key)) {
-        var value = player.events[key];
+        // 防御性编程，是自身属性；而不是继承下来的属性
+        var value = player.events[key]; // pause/play/slow/normal/fast
+
         document.querySelector(key).onclick = player[value];
       }
     }
@@ -206,4 +208,4 @@ var player = {
 };
 player.init();
 },{"./css.js":"K4Xi"}]},{},["HdJB"], null)
-//# sourceMappingURL=test.63f4a402.js.map
+//# sourceMappingURL=test.6ce5bed6.js.map

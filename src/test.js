@@ -23,8 +23,8 @@ const player = {
   }, // 初始化代码
   bindEvents: () => {
     for (let key in player.events) {
-      if (player.events.hasOwnProperty(key)){
-        const value = player.events[key]
+      if (player.events.hasOwnProperty(key)){ // 防御性编程，是自身属性；而不是继承下来的属性
+        const value = player.events[key] // pause/play/slow/normal/fast
         document.querySelector(key).onclick = player[value]
       }
     }
