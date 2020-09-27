@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && parcel build src/test.html --no-minify --public-url ./"
+  },
+  "name": "pikachu-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alertguo/pikachu.git",
+  "author": "alertguo <1196614612@qq.com>",
+  "license": "MIT"
+}
+
